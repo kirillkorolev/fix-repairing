@@ -1,0 +1,139 @@
+.examples {
+  margin-bottom: 161px;
+}
+
+.examples__title {
+  font-size: 40px;
+  line-height: 50px;
+  letter-spacing: -0.1px;
+  font-weight: 500;
+  margin: 0 0 8px;
+}
+
+.examples__slogan {
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  color: $green;
+  font-weight: 500;
+  margin-bottom: 52px;
+}
+
+.examples__wrap {
+  max-width: 990px;
+  padding: 0 5px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+
+.examples__button {
+  @include reset-button;
+
+  position: absolute;
+  bottom: -554px;
+  z-index: 5;
+  width: 25px;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  transition: all 0.4s ease-out 0.1s;
+
+  &--next {
+    right: 75px;
+  }
+
+  &--prev {
+    right: 127px;
+  }
+}
+
+.examples__button:hover,
+.examples__button:focus {
+  transform: scaleY(0.8);
+}
+
+.examples__image {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  height: 500px;
+}
+
+.examples__image-wrap {
+  width: auto;
+  flex-shrink: 0;
+}
+
+.examples__description {
+  padding: 0 0 5px 16px;
+  font-size: 13px;
+  line-height: 20px;
+  color: $charcoal;
+}
+
+.examples__slide-wrap {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.examples__slide {
+  width: 900px;
+}
+
+.examples__slider-container {
+  max-width: 1880px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.examples__slide.swiper-slide-next,
+.examples__slide.swiper-slide-prev {
+  opacity: 0.6;
+}
+
+@media (max-width: $tablet-width) {
+  .examples__title,
+  .examples__slogan {
+    text-align: center;
+  }
+
+  .examples__slide-wrap {
+    position: relative;
+    display: block;
+  }
+
+  .examples__description {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 30px;
+    background-color: $white;
+    padding: 10px;
+    width: 250px;
+  }
+
+  .examples__image {
+    max-width: 100%;
+    width: auto;
+  }
+
+  .examples__image-wrap {
+    width: 100%;
+  }
+
+  .examples__button {
+    bottom: -600px;
+
+    &--prev {
+      right: auto;
+      left: 20px;
+    }
+
+    &--next {
+      right: 20px;
+    }
+  }
+}
